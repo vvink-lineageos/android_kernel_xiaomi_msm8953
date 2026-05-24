@@ -66,6 +66,22 @@ endif
 ifneq ($(wildcard $(srctree)/arch/$(SRCARCH)/mach-msm/include/mach/msm_smsm.h),)
 EXTRA_CFLAGS += -DEXISTS_MSM_SMSM
 endif
+# Mirror KERNEL_BUILD=0 CONFIG_ flags so that ifeq-gated source-file lists
+# (e.g. wlan_hdd_tdls.o, wlan_hdd_lro.o, etc.) are compiled consistently.
+    CONFIG_PRIMA_WLAN_BTAMP := n
+    CONFIG_PRIMA_WLAN_LFR := y
+    CONFIG_PRIMA_WLAN_LFR_MBB := y
+    CONFIG_PRIMA_WLAN_OKC := y
+    CONFIG_PRIMA_WLAN_11AC_HIGH_TP := y
+    CONFIG_QCOM_TDLS := y
+    CONFIG_QCOM_VOWIFI_11R := y
+    CONFIG_WLAN_FEATURE_11W := y
+    CONFIG_WLAN_FEATURE_SAE := y
+    CONFIG_WLAN_FEATURE_SW_PTA := y
+    CONFIG_WLAN_AKM_SUITE_OWE := y
+    CONFIG_ENABLE_LINUX_REG := y
+    CONFIG_WLAN_OFFLOAD_PACKETS := y
+    CONFIG_MDNS_OFFLOAD_SUPPORT := y
 endif
 
 ifeq ($(KERNEL_BUILD), 0)
