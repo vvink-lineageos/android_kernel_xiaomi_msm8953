@@ -55,6 +55,13 @@
 		spi6 = &spi_6;
 	};
 
+	ramoops: ramoops {
+		compatible = "ramoops";
+		reg = <0x0 0x9ff00000 0x0 0x100000>;
+		record-size = <0x40000>;
+		console-size = <0x80000>;
+		pmsg-size = <0x20000>;
+	};
 
 };
 
