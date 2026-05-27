@@ -6,13 +6,11 @@ config MACH_XIAOMI_MSM8953
 	help
 	  Support for MSM8953 Xiaomi variants
 
-menu "Xiaomi board selection"
-
 config MACH_XIAOMI_MIDO
-        bool "Mido board"
-        select MACH_XIAOMI_MSM8953
-        help
-          Support for Xiaomi Redmi note 3
+	bool "Mido board"
+	select MACH_XIAOMI_MSM8953
+	help
+	  Support for Xiaomi Redmi note 3
 
 config MACH_XIAOMI_TISSOT
 	bool "Tissot board"
@@ -25,5 +23,3 @@ config MACH_XIAOMI_DAISY
 	select MACH_XIAOMI_MSM8953
 	help
 	  Support for Xiaomi Mi A2 Lite (daisy)
-
-endmenu
