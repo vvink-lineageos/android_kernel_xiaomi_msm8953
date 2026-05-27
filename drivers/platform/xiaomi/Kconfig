@@ -18,6 +18,12 @@ config MACH_XIAOMI_TISSOT
 	bool "Tissot board"
 	select MACH_XIAOMI_MSM8953
 	help
-	  Support for Xiomi MI A1 tissot
+	  Support for Xiaomi Mi A1 (tissot)
+
+config MACH_XIAOMI_DAISY
+	bool "Daisy board"
+	select MACH_XIAOMI_MSM8953
+	help
+	  Support for Xiaomi Mi A2 Lite (daisy)
 
 endmenu
